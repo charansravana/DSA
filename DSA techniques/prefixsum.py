@@ -1,3 +1,4 @@
+
 '''
 
 The prefix sum technique is a powerful method used to quickly calculate the sum of elements in a sub-array of a given array. It helps reduce the time complexity of multiple range sum queries from O(n) to O(1) after some O(n) preprocessing.
