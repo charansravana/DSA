@@ -14,6 +14,14 @@ Worst Case	    O(n)	    The target is at the last element or not present in the
 
 Space Complexity :- O(1) (No extra space is used—just a variable for the index and possible return)
 
+When to choose linear search:
+
+=> When the data is unsorted (it works on any order).
+=> For small lists (usually less than a few hundred elements).
+=> When the data changes frequently (adding or deleting elements).
+=> If you want a simple and quick-to-implement solution.
+=> When you do infrequent searches and don’t want the overhead of sorting or more complex methods.
+=> When using data structures with only sequential access like linked lists
 
 '''
 
