@@ -130,3 +130,12 @@ The time complexity is O(m+n), where m is the number of rows and n is the number
 Space Complexity: O(1)
 The space complexity is O(1) since we are using a constant amount of extra space.
 '''
+
+
+'''
+Pre-computation Required: Binary search and two-pointer techniques fail on unsorted data. You must sort the array first.
+Sorting Cost: Efficient sorting takes O(nlogn).
+Total Complexity on Unsorted Data: The total time becomes O(nlogn) because sorting is the bottleneck.
+Single Search Rule: For a one-time search on an unsorted array, a simple Linear Search (O(n)) is faster than sorting and then searching (O(nlogn)).
+'''
+
