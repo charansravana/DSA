@@ -43,3 +43,9 @@ def reverseBetween(self, head, left, right) :
             prev.next = temp
 
         return dummy.next
+
+
+def reverse_list(head, left, right):
+    prev = None
+    cur = head
+    

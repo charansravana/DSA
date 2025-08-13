@@ -68,3 +68,4 @@ class Solution:
             fast = self.getNext(self.getNext(fast))
         
         return fast == 1
+    

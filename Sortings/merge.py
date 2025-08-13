@@ -1,4 +1,5 @@
-''' Merge Sort is a divide and conquer sorting algorithm that:
+''' 
+Merge Sort is a divide and conquer sorting algorithm that:
 Divides the array into two halves recursively until each sub-array has only one element.Merges the sorted halves back together in a way that maintains order. 
 
 To implement the Merge Sort algorithm we need:

@@ -29,10 +29,27 @@ Minimum window substring containing all characters of another string
 Why Sliding Window?
 Maintain frequency maps while sliding the window. Adjust the window when frequency conditions are met.
 
-leetcode problems: 643 , 3, 76 
+leet-code problems: 643 , 3, 76 
 '''
 
-# Leetcode - 643. Maximum Average Sub-array I
+#pseudo code for sliding window technique
+def sliding_window(arr,w):
+    current_sum=0
+    for i in range(w):
+        current_sum+=arr[i]
+    max_sum=current_sum
+    for j in range(w,len(arr)):
+        current_sum=current_sum-arr[j-w]+arr[j]
+        if current_sum>max_sum:
+            max_sum=current_sum
+    return max_sum
+# Example usage
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] 
+w = 3
+print(sliding_window(arr, w))  # Output: 27 (sum of [8, 9, 10])
+
+
+# Leet-code - 643. Maximum Average Sub-array I
 def findMaxAverage(nums, k):
     current=0
     for i in range(k):
@@ -51,3 +68,4 @@ def findMaxAverage(nums, k):
 nums =[3,3,4,3,0]
 k =3
 print(findMaxAverage(nums, k))  
+

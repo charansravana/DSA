@@ -26,7 +26,7 @@ leetcode - 167,11
 
 '''
 
-## psuedo code for two pointers technique
+## pseudo code for two pointers technique
 def two_pointer_sum(arr, target):
     left = 0
     right = len(arr) - 1
@@ -85,3 +85,29 @@ print(twoSum([2,7,11,15],9))
 #     backtrack(0, [])
 #     return combinations
 # print(letterCombinations("23"))
+
+
+# Merging two sorted arrays using two pointers technique 
+def merge_two_arrays(self,arr1,arr2):
+    merged=[]
+    i,j,k=0,0,0
+    while i<len(arr1) and j<len(arr2):
+        if arr1[i]< arr2[j]:
+            if not merged or merged[-1] != arr1[i]:  #for duplicate removal 
+                merged.append(arr1[i])
+            i=i+1
+        elif arr1[i]>arr2[j]:
+            if not merged or merged[-1]!= arr2[j]:  #for duplicate removal
+                merged.append(arr2[j])
+            j+=1
+        else:
+            if not merged or merged[-1] != arr1[i]:  #for duplicate removal
+                merged.append(arr1[i])
+            i += 1
+            j += 1
+    return merged + arr1[i:] + arr2[j:]
+
+arr1=[1,2,9,11]
+arr2=[1,2,4,6,7]
+print(merge_two_arrays(None, arr1, arr2))  # Output: [1, 2, 3, 4, 5, 6]
+
