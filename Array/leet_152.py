@@ -1,5 +1,7 @@
 '''
-154.Given an integer array nums, find a sub-array that has the largest product, and return the product.The test cases are generated so that the answer will fit in a 32-bit integer.
+154.Maximum Product Sub-array (Medium)
+
+Given an integer array nums, find a sub-array that has the largest product, and return the product.The test cases are generated so that the answer will fit in a 32-bit integer.
 
 Example 1:
 Input: nums = [2,3,-2,4]
