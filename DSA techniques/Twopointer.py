@@ -21,9 +21,6 @@ Reverse array or linked list	    Swap ends moving inward
 Move zeros / partition array	    Rearranging in-place
 Detect cycle in linked list	        Fast and slow pointer meet
 
-
-leetcode - 167,11
-
 '''
 
 ## pseudo code for two pointers technique
@@ -44,7 +41,9 @@ def two_pointer_sum(arr, target):
     return None
 print(two_pointer_sum([2,7,11,15],9))
 
-# Leetcode-167 , for 1-based indexing 
+
+
+# Leet-code-167 , for 1-based indexing 
 def twoSum(numbers, target):
         left=0
         right=len(numbers)-1
@@ -60,46 +59,20 @@ def twoSum(numbers, target):
 print(twoSum([2,7,11,15],9))
 
 
-# # leetcode - 17
-# def letterCombinations(digits):
-#     if not digits:
-#         return []
-    
-#     digit_to_char = {
-#         '2': 'abc', '3': 'def', '4': 'ghi', '5': 'jkl',
-#         '6': 'mno', '7': 'pqrs', '8': 'tuv', '9': 'wxyz'
-#     }
-    
-#     def backtrack(index, path):
-#         if index == len(digits):
-#             combinations.append("".join(path))
-#             return
-        
-#         possible_chars = digit_to_char[digits[index]]
-#         for char in possible_chars:
-#             path.append(char)
-#             backtrack(index + 1, path)
-#             path.pop()
-
-#     combinations = []
-#     backtrack(0, [])
-#     return combinations
-# print(letterCombinations("23"))
-
 
 # Merging two sorted arrays using two pointers technique 
 def merge_two_arrays(self,arr1,arr2):
     merged=[]
-    i,j,k=0,0,0
+    i,j=0,0
     while i<len(arr1) and j<len(arr2):
         if arr1[i]< arr2[j]:
             if not merged or merged[-1] != arr1[i]:  #for duplicate removal 
                 merged.append(arr1[i])
-            i=i+1
+            i+= 1
         elif arr1[i]>arr2[j]:
             if not merged or merged[-1]!= arr2[j]:  #for duplicate removal
                 merged.append(arr2[j])
-            j+=1
+            j+= 1
         else:
             if not merged or merged[-1] != arr1[i]:  #for duplicate removal
                 merged.append(arr1[i])
